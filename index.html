@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Hello, world!</title>
+  <style>
+    div#notfication {
+      padding-left: 25%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    #brown_section {
+      color: #ffffff;
+      text-align: center;
+
+    }
+
+    .thumbnail {
+      background: #d9ecd0;
+    }
+
+    .image_caption {
+      text-align: center;
+    }
+
+    .download-btn {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .margin_elements {
+      margin: 10px;
+      margin-top: 40px;
+    }
+
+    #mobile_phone_group {
+      float: right;
+      margin-right: 10px;
+    }
+
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+
+
+
+    /* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #335;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: red;
+} */
+    #navlink a {
+      color: floralwhite;
+    }
+
+    section {
+      padding: 60px 0;
+
+    }
+
+    section .section-title {
+      text-align: center;
+      color: #618685;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+
+    #footer {
+      background: #618685 !important;
+    }
+
+    #footer h5 {
+      padding-left: 10px;
+      border-left: 3px solid #eeeeee;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    #footer a {
+      color: #ffffff;
+      text-decoration: none !important;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+    }
+
+    #footer ul.social li {
+      padding: 3px 0;
+    }
+
+    #footer ul.social li a i {
+      margin-right: 5px;
+      font-size: 25px;
+      -webkit-transition: .5s all ease;
+      -moz-transition: .5s all ease;
+      transition: .5s all ease;
+    }
+
+    #footer ul.social li:hover a i {
+      font-size: 30px;
+      margin-top: -10px;
+    }
+
+    #footer ul.social li a,
+    #footer ul.quick-links li a {
+      color: #ffffff;
+    }
+
+    #footer ul.social li a:hover {
+      color: #eeeeee;
+    }
+
+    #footer ul.quick-links li {
+      padding: 3px 0;
+      -webkit-transition: .5s all ease;
+      -moz-transition: .5s all ease;
+      transition: .5s all ease;
+    }
+
+    #footer ul.quick-links li:hover {
+      padding: 3px 0;
+      margin-left: 5px;
+      font-weight: 700;
+    }
+
+    #footer ul.quick-links li a i {
+      margin-right: 5px;
+    }
+
+    #footer ul.quick-links li:hover a i {
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body onload="readTextFile()">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Feedback</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+  </div>
+
+
+  <div class="container-fluid" style="background:  #618685; color: ghostwhite; padding-bottom: 20px;">
+    <div class="row">
+      <div id="main" class="col-1">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      </div>
+      <div class="col-md-4">
+        <h1>My First Bootstrap Page with some JS</h1>
+        <p>Now i will make this page more intractive with JS.</p>
+      </div>
+      <div class="col-md-7">
+        <h5 id="demo" style="margin-top: 20px;">Please Login before using this website.</h5>
+        <form class="form-inline" style="text-align: right; ">
+
+          <div class="form-group mr-2">
+
+            <label class="sr-only" for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+          </div>
+          <div class="form-group mr-2">
+            <label class="sr-only" for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+          </div>
+          <div class="form-group mr-2">
+            <label><input type="checkbox" class="mr-1"> Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="login()"
+            style="background:#80ced6;; color: #ffffff; border: none">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-pills" style="background-color: #335;">
+    <li id="navlink" class="nav-item">
+      <a href="#" class="nav-link" onclick="resetbreadcrum()">My Feed</a>
+    </li>
+
+    <li id="navlink" class="nav-item">
+      <a href="#" class="nav-link" onclick="personalizedNews()">Personalise</a>
+    </li>
+    <li id="navlink" class="nav-item">
+      <a href="#" class="nav-link" onclick="topStories()">Top Stories</a>
+    </li>
+    <li id="navlink" class="nav-item" onclick="trendingStories()">
+      <a href="#" class="nav-link">Trending Stories</a>
+    </li>
+    <li id="navlink" class="nav-item">
+      <!-- <a href="#" class="nav-link">Videos</a> -->
+      <a id="drpdwnlink" style="background: #80ced6;" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+        role="button" aria-haspopup="true" aria-expanded="false">Videos</a>
+      <div class="dropdown-menu" style="background: #80ced6;">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Action</a>
+      </div>
+    </li>
+  </ul>
+
+  <nav aria-label="breadcrumb">
+    <ol id="breadcrumid" class="breadcrumb">
+
+      <li class="breadcrumb-item" onclick="resetbreadcrum2()"><a href="#">Home</a></li>
+      <!-- <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item"><a href="#">Data</a></li> -->
+    </ol>
+    <p style="margin-left: 20px; ">Click navbar menu items to update breadcrumb and click "My Feed" to reset breadcrumb.
+    </p>
+  </nav>
+
+  <div class="row">
+    <div id="brown_section" class="col-6" style="background: #633517;">
+      <p>This is some text.</p>
+    </div>
+    <div class="col-6" style="background: #a6001a;">
+      <p>This is some text.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4" style="background: #ee9600;">
+      <p>This is some text.</p>
+    </div>
+    <div class="col-4" style="background: #004d33;">
+      <p>This is some text.</p>
+    </div>
+    <div class="col-4" style="background: #00477e;">
+      <p>This is some text.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:20px;text-align: center;">List of items.</h3>
+
+  <div class="row" style="margin: 50px;">
+
+    <div id="showData" class="col-4">
+
+    </div>
+    <div id="showData2" class="col-4">
+
+    </div>
+    <div id="showData3" class="col-4">
+
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="margin-top:20px; ">
+    <div class="row">
+      <div id="underWarrantyData" class="col-4" style="color: #004d33;">
+        <h4 style="text-align: center;">List of items under warranty.</h4>
+      </div>
+      <div id="expiringSoonData" class="col-4" style="color: #ee9600;">
+        <h4 style="text-align: center;">List of items expiringing soon.</h4>
+        <div style="text-align: center;color: #818181;" id="myDIV">
+          No such items.
+        </div>
+      </div>
+      <div id="expiredData" class="col-4" style="color: #a6001a;">
+        <h4 style="text-align: center;">List of expired items.</h4>
+      </div>
+    </div>
+  </div>
+  <div class="margin_elements" style="margin-top: 50px;">
+    <div class="container">
+      Enter your PAN card Number: <input style="margin-top: 10px;" type="text" class="form-control" name="" id="fname"
+        aria-describedby="helpId"
+        placeholder="When you leave the input field, a function is triggered which transforms the input text to upper case."
+        onblur=myFunction6()>
+    </div>
+  </div>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Roll No.</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ajeet Yadav</td>
+          <td>ajeety@hcl.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Brijesh Kumar</td>
+          <td>brijeshku@hcl.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="thumbnail">
+        <a href="msn.png">
+          <img src="msn.png" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p class="image_caption">Lorem ipsum...</p>
+            <div class="download-btn">
+              <button type="button" class="btn btn-primary">Download</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="thumbnail">
+        <a href="msn.png">
+          <img src="msn.png" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p class="image_caption">Lorem ipsum...</p>
+            <div class="download-btn">
+              <button type="button" class="btn btn-danger">Download</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="thumbnail">
+        <a href="msn.png">
+          <img src="msn.png" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p class="image_caption">Lorem ipsum...</p>
+            <div class="download-btn">
+              <button type="button" class="btn btn-warning">Download</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;" class="container">
+    <div class="jumbotron">
+      <h1 class="display-3">Jumbo heading</h1>
+      <p class="lead">Jumbo helper text</p>
+      <hr class="my-2">
+      <p>More info</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+      </p>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <h1>Hello, world! Hello, world! Hello, world! Hello, world! Hello, world!</h1>
+  </div>
+
+
+
+
+
+
+
+  <!-- <div class="alert alert-info alert-dismissible" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  A simple primary alert—check it out!
+</div>
+
+ <div class="alert alert-primary" role="alert">
+   <strong>Warning!</strong> <a href="www.google.com" class="alert-link">rererr</a>
+ </div>
+ <div class="alert alert-primary" role="alert">
+    A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  </div>
+  
+
+
+  <div class="alert alert-warning" role="alert">
+  A simple primary alert—check it out!
+ </div>
+
+ <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div>
+
+  
+  <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+
+
+  <div id="notfication">
+  <button id="button_botification"  class="btn btn-primary"  type="button">
+      Notifications <span class="badge badge-danger">4</span>
+ </button>
+
+    <a href="#" class="badge badge-primary">Primary</a>
+
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+      </nav>
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+          </ol>
+        </nav>
+       
+
+     <button type="button" class="btn btn-outline-primary btn-sm"  style="background:#cc0066; color: #ffffff;">Primary</button>
+          
+     <div  class="card" style="width: 18rem;">
+        <img src="C:\Users\ajeety\Desktop\msn.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  
+<div class="container">
+   <div class="row">
+     <div class="col-lg-4">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p> 
+     </div>
+     <div class="col-lg-4">
+        <h1>My First Bootstrap Page</h1>
+        <p>Resize this responsive page to see the effect!</p> 
+     </div> 
+     <div class="col-lg-4">
+        <h1>My First Bootstrap Page </h1>
+        <p>Resize this responsive page to see the effect!</p> 
+     </div>
+     <div class="col-lg-4">
+        <h1>My First Bootstrap Page </h1>
+        <p>Resize this responsive page to see the effect!</p> 
+     </div>
+   </div>
+</div>
+<img src="msn.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""> -->
+
+
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Quick links</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Quick links</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Quick links</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+            <li><a href="https://www.google.com" title="Design and developed by"><i
+                  class="fa fa-angle-double-right"></i>Imprint</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+            <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p><u><a href="https://www.google.com/">Google Inc</a></u> Mountain View, California, United States</p>
+          <p class="h6">&copy; All right Reversed.<a class="text-green ml-2" href="https://www.google.com/"
+              target="_blank">Google Inc</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="products.js"></script> -->
+
+
+
+
+  <script>
+    function myFunction6() {
+      var x = document.getElementById("fname");
+      x.value = x.value.toUpperCase();
+      var panVal = x.value;
+      var regpan = /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/;
+      if (regpan.test(panVal)) {
+        // valid pan card number
+        alert("valid pan card number");
+      } else {
+        // invalid pan card number
+        alert("invalid pan card number");
+      }
+    }
+    function login() {
+      // document.getElementById("demo").innerHTML ="Welcome back!";
+      var x = document.getElementById("inputEmail");
+
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x.value)) {
+        window.alert("Welcome" + x.value);
+        document.getElementById("demo").innerHTML = "Welcome back!";
+
+      } else {
+        window.alert("You have entered an invalid email address!");
+        document.getElementById("demo").innerHTML = "Please Retry!";
+
+      }
+    }
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+    function personalizedNews() {
+      let newLi = document.createElement('li');
+      // newLi.innerHTML = '<li class="breadcrumb-item active" aria-current="page"><a href="#">Personalise</a></li>';
+      // newLi.innerHTML ='<li class="breadcrumb-item"><a href="#"> Personalise </a></li> '
+      newLi.innerHTML = '<li class="breadcrumb-item"><a href="#"></a></li> <li class="breadcrumb-item active">Personalise</li>'
+      breadcrumid.appendChild(newLi);
+    }
+
+    function topStories() {
+      let newLi = document.createElement('li');
+      // newLi.innerHTML = '<li class="breadcrumb-item active" aria-current="page"><a href="#">Personalise</a></li>';
+      // newLi.innerHTML ='<li class="breadcrumb-item"><a href="#"> Personalise </a></li> '
+      newLi.innerHTML = '<li class="breadcrumb-item"><a href="#"></a></li> <li class="breadcrumb-item active">Top Stories</li>'
+      breadcrumid.appendChild(newLi);
+    }
+    function trendingStories() {
+      let newLi = document.createElement('li');
+      // newLi.innerHTML = '<li class="breadcrumb-item active" aria-current="page"><a href="#">Personalise</a></li>';
+      // newLi.innerHTML ='<li class="breadcrumb-item"><a href="#"> Personalise </a></li> '
+      newLi.innerHTML = '<li class="breadcrumb-item"><a href="#"></a></li> <li class="breadcrumb-item active">Trending Stories</li>'
+      breadcrumid.appendChild(newLi);
+    }
+    function resetbreadcrum() {
+      breadcrumid
+      var v = document.getElementById("breadcrumid");
+      v.innerHTML = '<li class="breadcrumb-item"><a href="#">Home</a></li>';
+    }
+    function resetbreadcrum2() {
+      breadcrumid
+      var v = document.getElementById("breadcrumid");
+      v.innerHTML = '<li class="breadcrumb-item"><a href="#">Home</a></li>';
+    }
+
+
+
+    //for Category
+    var container = document.getElementById("showData");
+    // Create the Unordered list if there are elements present in the array  
+    var myList = document.createElement("ul");
+    // add a class name to list
+    myList.className = "list";
+
+    //for SubCategory
+    var container2 = document.getElementById("showData2");
+    // Create the Unordered list if there are elements present in the array  
+    var myList2 = document.createElement("ul");
+    // add a class name to list
+    myList2.className = "list";
+
+
+    //for SubCategory
+    var container3 = document.getElementById("showData3");
+    // Create the Unordered list if there are elements present in the array  
+    var myList3 = document.createElement("ul");
+    // add a class name to list
+    myList3.className = "list";
+
+    //for expiredData
+    var container4 = document.getElementById("expiredData");
+    // Create the Unordered list if there are elements present in the array  
+    var myList4 = document.createElement("ul");
+    // add a class name to list
+    myList4.className = "list";
+
+
+    //for expiring soon data
+
+    var container5 = document.getElementById("expiringSoonData");
+    // Create the Unordered list if there are elements present in the array  
+    var myList5 = document.createElement("ul");
+    // add a class name to list
+    myList5.className = "list";
+
+
+    //for expiring soon data
+
+    var container6 = document.getElementById("underWarrantyData");
+    // Create the Unordered list if there are elements present in the array  
+    var myList6 = document.createElement("ul");
+    // add a class name to list
+    myList6.className = "list";
+
+
+
+
+    let productArray = [];
+    let expiredProductArray = [];
+
+    function readTextFile() {
+      loadJSON(function (response) {
+        let catArray = [];
+        let subCatArray = [];
+
+
+        // Parse JSON string into object
+        var actual_JSON = JSON.parse(response);
+        let m = new Products(actual_JSON);
+
+        //console.log(m)
+        //m.print();
+
+        m.geCategoriesname();
+        m.getSubcategoriesUnderSubcat();
+
+
+        //  m. getProduct();
+        // addTable();
+
+
+        // append the list in the container
+        container.appendChild(myList);
+        // append the sub cat list in the container2
+        container2.appendChild(myList2);
+        // append the sub cat list in the container2
+        container3.appendChild(myList3);
+        // append the sub cat list in the container2
+        container4.appendChild(myList4);
+        // append the sub cat list in the container2
+        container5.appendChild(myList5);
+        // append the sub cat list in the container2
+        container6.appendChild(myList6);
+
+
+        //console.log("p_array",productArray);
+        let va = productArray.map(mWArray);
+        console.log("filter_p_array", va);
+
+
+        let ab = va.filter(function (va) {
+          return checkProductValadity(va.dop, va.wp.charAt(0)) <= 0;
+          // return va.name == "FE 135mm F1.8 GM"
+        });
+
+        //console.log("expire_p_array", ab);
+        createTableForExpiredItem(ab);
+
+
+        let expiresoon = va.filter(function (va) {
+          var dif = checkProductValadity(va.dop, va.wp.charAt(0));
+
+          //return dif<120;
+          return (dif > 0) && (dif < 120);
+          // return va.name == "FE 135mm F1.8 GM"
+        });
+        if (expiresoon.length > 0) {
+          createTableForExpiringSoonItem(expiresoon);
+        }
+
+
+
+        let underWarranty = va.filter(function (va) {
+          var dif = checkProductValadity(va.dop, va.wp.charAt(0));
+          //return dif<120;
+          return (dif > 120);
+          // return va.name == "FE 135mm F1.8 GM"
+        });
+        createTableForunderwaarantyItem(underWarranty);
+      });
+    }
+
+
+
+    function createTableForunderwaarantyItem(underWarranty) {
+      underWarranty.forEach(myFunctionunderWarranty);
+    }
+
+    function myFunctionunderWarranty(item) {
+      var listItem = document.createElement("li");
+
+      // create a text node to store value
+      var listValue = document.createTextNode(item.name);
+
+      // append the value in the list item
+      listItem.appendChild(listValue);
+
+      // append the list item in the list
+      myList6.appendChild(listItem);
+    }
+
+
+    function createTableForExpiringSoonItem(exsoon) {
+      var x = document.getElementById("myDIV");
+      x.style.display = "none";
+      exsoon.forEach(myFunctionExpiresoon);
+    }
+    function myFunctionExpiresoon(item) {
+
+      var listItem = document.createElement("li");
+
+      // create a text node to store value
+      var listValue = document.createTextNode(item.name);
+
+      // append the value in the list item
+      listItem.appendChild(listValue);
+
+      // append the list item in the list
+      myList5.appendChild(listItem);
+    }
+
+    function createTableForExpiredItem(ab) {
+      ab.forEach(myFunctionExpire);
+    }
+    function myFunctionExpire(item) {
+      var listItem = document.createElement("li");
+
+      // create a text node to store value
+      var listValue = document.createTextNode(item.name);
+
+      // append the value in the list item
+      listItem.appendChild(listValue);
+
+      // append the list item in the list
+      myList4.appendChild(listItem);
+
+    }
+
+
+    function checkProductValadity(dop, wp) {
+      console.log("currentDate", getCurrentdate());
+
+      var d = dop.toDate("dd/MM/yyyy", "/");
+      var dww = addYearToCurrentDate(d, parseInt(wp)).toDate("dd/MM/yyyy", "/");
+
+      console.log(d.getFullYear());
+      console.log(dww.getFullYear());
+      var days = daysBetween(getCurrentdate().toDate("dd/MM/yyyy", "/"), dww);
+      console.log(days);
+      return days;
+
+    }
+
+
+    function getCurrentdate() {
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1; //January is 0!
+
+      var yyyy = today.getFullYear();
+      if (dd < 10) {
+        dd = '0' + dd;
+      }
+      if (mm < 10) {
+        mm = '0' + mm;
+      }
+      var today = dd + '/' + mm + '/' + yyyy;
+      return today;
+    }
+
+    function addYearToCurrentDate(d, years) {
+      //var today = new Date();
+      var dd = d.getDate();
+      var mm = d.getMonth() + 1; //January is 0!
+
+      var yyyy = d.getFullYear();
+      var yearBefore = yyyy + years;
+      if (dd < 10) {
+        dd = '0' + dd;
+      }
+      if (mm < 10) {
+        mm = '0' + mm;
+      }
+      var today = dd + '/' + mm + '/' + yearBefore;
+      return today;
+    }
+
+    function daysBetween(date1, date2) {
+      //Get 1 day in milliseconds
+      var one_day = 1000 * 60 * 60 * 24;
+
+      // Convert both dates to milliseconds
+      var date1_ms = date1.getTime();
+      var date2_ms = date2.getTime();
+
+      // Calculate the difference in milliseconds
+      var difference_ms = date2_ms - date1_ms;
+
+      // Convert back to days and return
+      return Math.round(difference_ms / one_day);
+    }
+
+    function loadJSON(callback) {
+      var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', 'products.json', true); // Replace 'my_data' with the path to your file
+      xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+          callback(xobj.responseText);
+        }
+      };
+      xobj.send(null);
+    }
+
+
+    class Products {
+      constructor(obj) {
+        Object.assign(this, obj)
+
+      }
+      print() {
+        console.log(this.children[0].name);
+      }
+
+      geCategoriesname() {
+        this.children.forEach(myFunction);
+      }
+      getSubcategoriesUnderSubcat() {
+        this.children.forEach(myitration);
+        // for (var i in this.children) {
+        //   this.children[i].children.forEach(myFunction2);
+        // }
+      }
+
+
+      
+    }
+    function myitration(item) {
+      item.children.forEach(myFunction2);
+    }
+
+    function myFunction(item) {
+      console.log("catarray", item.name);
+      // create list item for every element 
+      var listItem = document.createElement("li");
+
+      // create a text node to store value
+      var listValue = document.createTextNode(item.name);
+
+      // append the value in the list item
+      listItem.appendChild(listValue);
+
+      // append the list item in the list
+      myList.appendChild(listItem);
+    }
+
+    function myFunction2(item) {
+      console.log("subcatarray", item.name);
+      getProducts(item);
+
+      // addTableRow(item.name)
+      // create list item for every element 
+      var listItem = document.createElement("li");
+
+      // create a text node to store value
+      var listValue = document.createTextNode(item.name);
+
+      // append the value in the list item
+      listItem.appendChild(listValue);
+
+      // append the list item in the list
+      myList2.appendChild(listItem);
+    }
+
+    function getProducts(item) {
+      console.log("product_array", item);
+      item.children.forEach(myFunction3);
+      //console.log (" filter product",item.children.filter(checkExpiredWarrenty).name);
+    }
+
+    function mWArray(productArray) {
+      var ew;
+      if (productArray.extendedWarranty == "none") {
+        ew = '0year';
+      } else {
+        ew = productArray.extendedWarranty;
+      }
+      var array = { name: productArray.name, dop: productArray.orderedDate, wp: productArray.warrantyPeriod, exw: ew };
+      return array;
+    }
+
+    function myFunction3(item) {
+      productArray.push(item);
+      console.log("product", item.name);
+      // create list item for every element 
+      var listItem = document.createElement("li");
+
+      // create a text node to store value
+      var listValue = document.createTextNode(item.name);
+
+      // append the value in the list item
+      listItem.appendChild(listValue);
+      // append the list item in the list
+      myList3.appendChild(listItem);
+    }
+
+
+
+
+
+
+
+    String.prototype.toDate = function (format) {
+      var normalized = this.replace(/[^a-zA-Z0-9]/g, '-');
+      var normalizedFormat = format.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
+      var formatItems = normalizedFormat.split('-');
+      var dateItems = normalized.split('-');
+
+      var monthIndex = formatItems.indexOf("mm");
+      var dayIndex = formatItems.indexOf("dd");
+      var yearIndex = formatItems.indexOf("yyyy");
+      var hourIndex = formatItems.indexOf("hh");
+      var minutesIndex = formatItems.indexOf("ii");
+      var secondsIndex = formatItems.indexOf("ss");
+
+      var today = new Date();
+
+      var year = yearIndex > -1 ? dateItems[yearIndex] : today.getFullYear();
+      var month = monthIndex > -1 ? dateItems[monthIndex] - 1 : today.getMonth() - 1;
+      var day = dayIndex > -1 ? dateItems[dayIndex] : today.getDate();
+
+      var hour = hourIndex > -1 ? dateItems[hourIndex] : today.getHours();
+      var minute = minutesIndex > -1 ? dateItems[minutesIndex] : today.getMinutes();
+      var second = secondsIndex > -1 ? dateItems[secondsIndex] : today.getSeconds();
+
+      return new Date(year, month, day, hour, minute, second);
+    };
+  </script>
+</body>
+
+</html>
